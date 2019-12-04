@@ -57,20 +57,20 @@ ft = 3;    // frame thickness
 
 sx = (size=="5inch") ? 112.7 : 157.1; // screen x
 sy = (size=="5inch") ? 83.8 : 108.2;  // screen y
-shd = 2.8; // screen hole diameter for M3 or #4 screw
+shd = 2.8; // screen hole diameter - M3 screw
 sph = 6.5; // screen post height
 spd = 8;   // screen post diameter
 
 vx = (vesa=="vesa75") ? 75 : 100; // vesa x
 vy = (vesa=="vesa75") ? 75 : 100; // vesa y
-vhd = 4.8; // vesa hole diameter
+vhd = 3.8; // vesa hole diameter - M4 screw
 vph = sph; // vesa post height
 vpd = 10; // vesa post diameter
 
 // pi 3B+ 4
 px = 58;   // pi x
 py = 49;   // pi y
-phd = 2.2; // pi hole diameter for M2.5 screw
+phd = 2.2; // pi hole diameter - M2.5 screw
 pph = 3;   // pi post height
 ppd = 6.5; // pi post diameter
 
