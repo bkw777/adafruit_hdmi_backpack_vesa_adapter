@@ -14,3 +14,8 @@ Supports Raspberry Pi 4, 3B+, and whatever other models have the same bolt patte
 ![](adafruit_hdmi_backpack_7inch_vesa75_pi34.png)
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+Screw sizes:  
+ Vesa: M4  
+ Display: M3  
+ Pi: M2.5  
