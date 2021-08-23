@@ -17,16 +17,16 @@
 
 // The mount holes for the vesa mount take M4 screws.
 // Spacer posts between the frame and the vesa mount will usually be needed to use a vesa mount.
-// The size will vary depending on the design of the particular vesa mount, and whether or not a Pi in installed.
+// The length of screws and spacers required for the Vesa mount will vary depending on the design of the particular vesa mount or stand being used, and whether or not a Pi is installed.
 //
 // The mount holes for the Pi take M2.5 screws.
-// The Pi mount posts can be used 2 ways. A Pi can be mounted bare on the posts,
-// and M2.5x8 screws can go in from the top of the Pi and thread into the posts.
+// The Pi mount posts can be used 2 ways:
+//   1: A Pi can be mounted bare on the posts, and M2.5x8 screws can go in from the top of the Pi and thread into the posts.
 //   https://www.metricscrews.us/index.php?main_page=product_info&products_id=137
 //
-// Or, a Pi in a solid aluminum armor heatsink case can be mounted by running longer M2.5 screws (perhaps 20mm)
-// from the front side of the frame (the screen side), through the entire length of the posts,
-// through that bottom half of the heatsink case, through the Pi pcb, and thread into the top half of the heatsink case.
+//   2: Or, a Pi in a solid aluminum armor heatsink case can be mounted by running longer M2.5x20 screws
+//   from the front side of the frame (the screen side), through the entire length of the posts,
+//   through the bottom half of the heatsink case, through the Pi pcb, and thread into the top half of the heatsink case.
 //   https://www.amazon.com/dp/B07VMD25SK/
 //   https://www.metricscrews.us/index.php?main_page=product_info&products_id=166
 //
@@ -47,34 +47,66 @@
 // * front bezel
 // * back cover
 
-// Configuration
-size = "7inch";   // 5, 7
-vesa = "vesa75";  // 75, 100
+// Display Size: "5inch" or "7inch"
+size = "7inch";
+
+// Vesa Mount Size: "vesa75" or "vesa100"
+vesa = "vesa75";
 
 /////////////////////////////////////////////////////////////////////
 
-ft = 3;    // frame thickness
+// Frame Thickness
+ft = 3;
 
-sx = (size=="5inch") ? 112.7 : 157.1; // screen x
-sy = (size=="5inch") ? 83.8 : 108.2;  // screen y
-shd = 2.8; // screen hole diameter - M3 screw
-sph = 6.5; // screen post height
-spd = 8;   // screen post diameter
+// Screen Size X (derived from Display Size)
+sx = (size=="5inch") ? 112.7 : 157.1;
 
-vx = (vesa=="vesa75") ? 75 : 100; // vesa x
-vy = (vesa=="vesa75") ? 75 : 100; // vesa y
-vhd = 3.8; // vesa hole diameter - M4 screw
-vph = sph; // vesa post height
-vpd = 10; // vesa post diameter
+// Screen Size Y (derived from Display Dize)
+sy = (size=="5inch") ? 83.8 : 108.2;
 
-// pi 3B+ 4
-px = 58;   // pi x
-py = 49;   // pi y
-phd = 2.2; // pi hole diameter - M2.5 screw
-pph = 3;   // pi post height
-ppd = 6.5; // pi post diameter
+// Screen Mount Post I.D. (2.8 -> M3 screw)
+shd = 2.8;
 
-$fn = 36; // smooth arcs
+// Screen Mount Post Height
+sph = 6.5;
+
+// Screen Mount Post O.D.
+spd = 8;
+
+// Vesa Mount X (derived from Vesa Mount Size)
+vx = (vesa=="vesa75") ? 75 : 100;
+
+// Vesa Mount Y (derived from Vesa Mount Size)
+vy = (vesa=="vesa75") ? 75 : 100;
+
+// Vesa Mount Post I.D. (3.8 -> M4 screw)
+vhd = 3.8;
+
+// Vesa Mount Post Height ( = Screen Mount Post Height)
+vph = sph;
+
+// Vesa Mount Post O.D.
+vpd = 10;
+
+// pi 3B+/4
+
+// Pi Mount Post X
+px = 58;
+
+// Pi Mount Post Y
+py = 49;
+
+// Pi Mount Post I.D. (2.2 - M2.5 screw)
+phd = 2.2;
+
+// Pi Mount Post Height
+pph = 3;
+
+// Pi Mount Post O.D.
+ppd = 6.5;
+
+// arc smoothness
+$fn = 36;
 
 /////////////////////////////////////////////////////////////////////////
 
